@@ -9,10 +9,11 @@ def build_graph():
         7: [4, 6],
     }
 
+
 def path_exists(graph, start, target):
     visited = set()
     stack = [start]
-    
+
     while stack:
         node = stack.pop()
         if node == target:
@@ -24,11 +25,12 @@ def path_exists(graph, start, target):
                     stack.append(neighbor)
     return False
 
+
 if __name__ == "__main__":
     g = build_graph()
     start_node = int(input("Enter the start node: "))
     end_node = int(input("Enter the end node: "))
-    
+
     if path_exists(g, start_node, end_node):
         print("True – a path exists!")
     else:
